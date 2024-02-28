@@ -4,45 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Derek Chavez</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 20px;
-        }
-
-        h1 {
+            background-color: #f5f5f5;
             color: #333;
+            padding: 20px;
         }
 
-        h2 {
-            color: #555;
+        h1, h2 {
+            color: #007bff;
         }
 
         p {
             color: #777;
         }
 
-        .contact-info {
-            margin-top: 20px;
+        .contact-info a {
+            color: #28a745;
         }
 
-        .preferred-locations {
-            margin-top: 10px;
+        .preferred-locations p {
+            color: #6c757d;
         }
 
-        .skills {
-            margin-top: 20px;
+        .skills p, .learning p {
+            color: #17a2b8;
         }
 
-        .learning {
-            margin-top: 20px;
+        img {
+            border-radius: 50%;
+        }
+
+        .contact-info, .preferred-locations, .skills, .learning {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .contact-info, .preferred-locations, .skills, .learning {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+            color: #218838;
+        }
+
+        .scroll-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .scroll-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 
 <body>
     <h1>About Me</h1>
+    <img src="https://avatars.githubusercontent.com/u/129697286?s=96&v=4" alt="Profile Picture" width="200" height="200">
     <p>My name is Derek Chavez, and first and foremost, I am a devoted father of two incredible children: Kalaya, my 4-year-old daughter, and Dominic, the newest addition to our family. Currently, my wife, children, and I call Parker, CO our home.</p>
 
     <h2>Background</h2>
@@ -53,7 +83,7 @@
     <p>Throughout my diverse career path, I have developed a strong ability to adapt to fast-paced environments and effectively communicate with others. I thrive in detail-oriented work and find great joy in collaborating within team-oriented settings. My ultimate aspiration is to forge a fulfilling career in the technology industry—a field that ignites my passion and enables me to continually strive for personal growth and excellence.</p>
 
     <div class="contact-info">
-        <h2>Contact Me</h2>
+        <h2>Contact</h2>
         <p>Contact me at: <a href="mailto:dmchavez1824@gmail.com">dmchavez1824@gmail.com</a></p>
     </div>
 
@@ -72,6 +102,14 @@
         <h2>Currently Learning</h2>
         <p>AWS, Javascript</p>
     </div>
+
+    <button class="scroll-button" onclick="scrollToTop()">Scroll to Top</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 
 </html>
